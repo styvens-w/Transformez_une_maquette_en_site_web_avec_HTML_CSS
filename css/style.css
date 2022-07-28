@@ -1,13 +1,13 @@
 /** Général PC */
 
-
 body
 {
     font-family: 'Raleway', sans-serif;
     margin: 0 auto;
-    padding: 0 15px;
-    max-width: 962px;
+    max-width: 1080px;
     min-width: 300px;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
 h1
@@ -464,9 +464,8 @@ header nav ul li a:hover
 #conteneur2
 {
     margin-top: 50px;
+    padding-right: 30px;
 }
-
-
 
 #activites h2
 {
@@ -512,17 +511,19 @@ header nav ul li a:hover
     font-size: 13px;
     box-shadow: 1px 1px 6px 4px #F2F2F2;
     overflow: hidden;
-    width: 220px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     height: 100%;
     box-sizing: border-box;
+    margin-right: 15px;
 }
 
 #activites .activite_liste div.petit a
 {
     height: 150px;
+    margin-left: 15px;
+    margin-right: 0;
 }
 
 #activites .activite_liste:first-child div.petit a:first-child
@@ -610,6 +611,16 @@ footer div a
     margin-bottom: 9px;
 }
 
+
+
+
+@media screen and (max-width: 991px)
+{
+    body
+    {
+
+    }
+}
 
 
 
@@ -841,6 +852,7 @@ footer div a
     {
         box-shadow: 1px 1px 6px 4px #F2F2F2;
         width: 100%;
+        box-sizing: border-box;
     }
 
     #conteneur1 .hebergement_liste a p, #conteneur1 .populaire_liste a p
@@ -887,6 +899,7 @@ footer div a
     #conteneur2
     {
         margin-top: 10px;
+        padding-right: 0;
     }
 
     #activites
@@ -898,7 +911,7 @@ footer div a
     #activites .activite_liste
     {
         width: 100%;
-        margin: 0;
+        margin: 0 !important;
     }
 
     #activites .activite, #activites .activite_liste
@@ -910,6 +923,8 @@ footer div a
     #activites .activite_liste a, #activites .activite_liste .petit a
     {
         margin-bottom: 30px;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
         width: 100%;
         font-size: 20px;
         height: 220px !important;
