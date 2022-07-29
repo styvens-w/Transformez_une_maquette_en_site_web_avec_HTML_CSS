@@ -5,7 +5,6 @@ body
     font-family: 'Raleway', sans-serif;
     margin: 0 auto;
     max-width: 1080px;
-    min-width: 300px;
     padding: 0 15px;
     box-sizing: border-box;
 }
@@ -614,11 +613,82 @@ footer div a
 
 
 
-@media screen and (max-width: 991px)
-{
-    body
-    {
+@media screen and (max-width: 991px) {
 
+    #conteneur1
+    {
+        flex-direction: column-reverse;
+        box-sizing: border-box !important;
+    }
+
+    #conteneur1 #hebergements, #conteneur1 #populaire
+    {
+        width: auto;
+    }
+
+    #conteneur1 section:nth-child(2)
+    {
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+
+    #conteneur1 section:nth-child(1)
+    {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    #conteneur1 .populaire_liste
+    {
+        flex-direction: row;
+    }
+
+    #conteneur1 .populaire_liste a
+    {
+        width: 33.33%;
+        height: 120px;
+    }
+
+    #conteneur1 .populaire_liste a:nth-child(2)
+    {
+        margin: 0 10px;
+    }
+
+    #conteneur1 .populaire_liste a .nom_hebergement
+    {
+        font-size: 12px !important;
+        margin-right: 5px;
+    }
+
+
+    #conteneur2
+    {
+        padding-right: 10px;
+        margin-top: 30px;
+    }
+
+    #activites .activite_liste:first-child
+    {
+        margin-right: 5px;
+    }
+
+    #activites .activite_liste:last-child
+    {
+        margin-left: 5px;
+    }
+
+    #activites .activite_liste a
+    {
+        margin-right: 0;
+    }
+
+    #activites .activite_liste div.petit a
+    {
+        margin-left: 10px;
+    }
+
+    #activites .activite a p {
+        padding: 0 5px 0 10px;
     }
 }
 
@@ -824,17 +894,24 @@ footer div a
 
     #conteneur1 .populaire_liste, #conteneur2 .activite_liste
     {
-        max-width: 500px;
+
+        flex-direction: column;
     }
 
     #conteneur1 .populaire_liste a
     {
         height: 140px;
+        width: 100%;
     }
 
     #conteneur1 .populaire_liste a .image-carte
     {
         width: 130px;
+    }
+
+    #conteneur1 .populaire_liste a:nth-child(2)
+    {
+        margin: 0 0 20px;
     }
 
     #conteneur1 .populaire_liste a div:not(.note) {
@@ -868,7 +945,6 @@ footer div a
     #conteneur1 .hebergement_liste
     {
         flex-direction: column;
-        max-width: 500px;
     }
 
     #conteneur1 #hebergements .hebergement_liste a:nth-child(2)
@@ -942,6 +1018,11 @@ footer div a
         margin-left: 0;
     }
 
+    #activites .activite a p
+    {
+        padding: 0 5px 0 15px;
+    }
+
 
 
     /** Footer */
@@ -966,5 +1047,20 @@ footer div a
     {
         font-size: 19px;
         margin-bottom: 15px;
+    }
+}
+
+
+
+@media screen and (max-width: 385px) and (min-width: 360px) {
+
+    #conteneur1 .populaire_liste a .nom_hebergement
+    {
+        font-size: 18px !important;
+    }
+
+    #conteneur1 .populaire_liste a p
+    {
+        font-size: 14px !important;
     }
 }
